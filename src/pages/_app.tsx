@@ -1,7 +1,7 @@
 /* -------------------------------------------------------------------------- */
 /*                             External Dependency                            */
 /* -------------------------------------------------------------------------- */
-import React, { ReactElement, ReactNode, useState } from "react";
+import React, { ReactElement, ReactNode } from "react";
 import type { AppProps } from "next/app";
 import { NextPage } from "next";
 
@@ -33,7 +33,7 @@ const App = ({ Component, pageProps }: AppPropsWithLayout) => {
 
     return (
         <ThemeProvider>
-            <GlobalStyle height={undefined} $variant={""} />
+            <GlobalStyle />
             <Layout>
                 <Component {...pageProps} />
             </Layout>
