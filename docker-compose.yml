@@ -1,0 +1,14 @@
+version: "3"
+services:
+    civai-portfolio-web:
+        container_name: vearn-landing-page
+        restart: always
+        ports:
+            - "3009:3000"
+        build:
+            context: .
+            dockerfile: Dockerfile
+        env_file: .env
+#    volumes:
+#      - ./:/opt/app/
+
