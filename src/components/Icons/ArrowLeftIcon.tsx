@@ -6,16 +6,16 @@ const ArrowLeftIcon = () => {
             <path
                 d="M14.8125 8.79419H3.5625"
                 stroke="white"
-                stroke-width="1.5"
-                stroke-linecap="round"
-                stroke-linejoin="round"
+                strokeWidth="1.5"
+                strokeLinecap="round"
+                strokeLinejoin="round"
             />
             <path
                 d="M10.2754 4.27599L14.8129 8.79399L10.2754 13.3127"
                 stroke="white"
-                stroke-width="1.5"
-                stroke-linecap="round"
-                stroke-linejoin="round"
+                strokeWidth="1.5"
+                strokeLinecap="round"
+                strokeLinejoin="round"
             />
         </svg>
     );
