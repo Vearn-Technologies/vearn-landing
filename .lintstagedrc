@@ -1,0 +1,7 @@
+{
+    "*.+(js|jsx)": ["yarn format", "git add"],
+    "*.+(json|css|md)": ["yarn format", "git add"],
+    "*.+(ts|tsx)": ["yarn format", "git add"],
+    "*.+(ts|tsx|js|jsx|json|css|md)": ["yarn fix", "git add"],
+    "package.json": ["yarn format", "git add"]
+}

@@ -1,0 +1,29 @@
+import React, { PropsWithChildren } from "react";
+import Head from "next/head";
+
+import SkipToMain from "components/A11y/skip-to-main";
+import { Main } from "./styles";
+
+interface ILayout extends PropsWithChildren {
+    title: string;
+}
+
+const Layout = ({ children, title }: ILayout) => {
+    return (
+        <>
+            <Head>
+                <title>{`Vearn | ${title}`}</title>
+                <meta name="msapplication-TileColor" content="#000000" />
+                <meta name="theme-color" content="#000000" />
+                <meta
+                    name="viewport"
+                    content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no, viewport-fit=cover"
+                />
+            </Head>
+            <SkipToMain content="main-content" />
+            <Main>{children}</Main>
+        </>
+    );
+};
+
+export default Layout;
