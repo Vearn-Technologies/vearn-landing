@@ -5,14 +5,11 @@ import React, { ReactElement, ReactNode } from "react";
 import type { AppProps } from "next/app";
 import { NextPage } from "next";
 
-import "normalize.css";
-import "bootstrap/dist/css/bootstrap.min.css";
-
+import "styles/global.css";
 /* -------------------------------------------------------------------------- */
 /*                             Internal Dependency                            */
 /* -------------------------------------------------------------------------- */
-import GlobalStyle from "styles/Global";
-import ThemeProvider from "styles/ThemeProvider";
+
 import { StringNReactElement } from "interfaces";
 
 // eslint-disable-next-line @typescript-eslint/ban-types
@@ -32,12 +29,9 @@ const App = ({ Component, pageProps }: AppPropsWithLayout) => {
     const Layout = Component.Layout || Noop;
 
     return (
-        <ThemeProvider>
-            <GlobalStyle />
-            <Layout>
-                <Component {...pageProps} />
-            </Layout>
-        </ThemeProvider>
+        <Layout>
+            <Component {...pageProps} />
+        </Layout>
     );
 };
 

@@ -7,7 +7,6 @@ import React, { forwardRef } from "react";
 /*                            Internal Dependencies                           */
 /* -------------------------------------------------------------------------- */
 import { Loader } from "components/Icons";
-import StyledButton, { StyledLink } from "./style";
 
 interface ButtonProps extends React.ButtonHTMLAttributes<HTMLButtonElement> {
     label?: string;
@@ -20,7 +19,6 @@ interface ButtonProps extends React.ButtonHTMLAttributes<HTMLButtonElement> {
     disabled?: boolean;
     isLoading?: boolean;
     children?: React.ReactNode;
-    height?: string | undefined;
     value?: string | number | readonly string[] | undefined;
     id?: string;
     href?: string;
@@ -30,14 +28,11 @@ const Button = forwardRef<HTMLButtonElement, ButtonProps>(
     (
         {
             label,
-            variant,
-            type,
             className,
             onClick,
             disabled,
             isLoading,
             children,
-            height,
             IconAfter,
             IconBefore,
             value,
@@ -50,31 +45,25 @@ const Button = forwardRef<HTMLButtonElement, ButtonProps>(
         if (href !== undefined) {
             return (
                 // @ts-expect-error
-                <StyledLink
+                <a
                     {...rest}
                     className={`btn ${className}`}
-                    id={id}
                     href={href}
                     aria-label={`Open ${label}`}
                     target={href.startsWith("http") ? "_blank" : "_self"}
                     rel={href.startsWith("http") ? "noopener noreferrer" : ""}
-                    $variant={variant}
-                    height={height}
                 >
-                    {label}
-                    {IconAfter !== null && <span className="ml-2">{IconAfter}</span>}
-                </StyledLink>
+                    {children}
+                </a>
             );
         }
         return (
-            <StyledButton
-                $variant={variant}
-                type={type}
+            <button
+                type="button"
                 className={`btn ${className}`}
                 ref={ref}
-                onClick={type !== "submit" ? onClick : undefined}
+                onClick={onClick}
                 disabled={(disabled ?? false) || isLoading}
-                height={height}
                 value={value}
                 id={id}
             >
@@ -84,7 +73,7 @@ const Button = forwardRef<HTMLButtonElement, ButtonProps>(
                 {children}
 
                 {IconAfter !== null && <span className="ml-2">{IconAfter}</span>}
-            </StyledButton>
+            </button>
         );
     },
 );
@@ -95,7 +84,6 @@ Button.defaultProps = {
     disabled: false,
     isLoading: false,
     children: null,
-    height: "40px",
     onClick: () => {},
     value: undefined,
     id: undefined,
