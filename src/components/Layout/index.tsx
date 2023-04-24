@@ -2,7 +2,6 @@ import React, { PropsWithChildren } from "react";
 import Head from "next/head";
 
 import SkipToMain from "components/A11y/skip-to-main";
-import { Main } from "./styles";
 
 interface ILayout extends PropsWithChildren {
     title: string;
@@ -21,7 +20,7 @@ const Layout = ({ children, title }: ILayout) => {
                 />
             </Head>
             <SkipToMain content="main-content" />
-            <Main>{children}</Main>
+            <div className="w-full h-screen max-h-screen overflow-hidden relative bg-[#15191E]">{children}</div>
         </>
     );
 };
