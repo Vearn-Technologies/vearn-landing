@@ -49,24 +49,25 @@ const ComingSoon = () => {
 
     return (
         <div className="container w-full h-full flex flex-col justify-center py-4">
-            <Link className="absolute top-[1rem] xl:absolute xl:top-[72px] md:mt-10 lg:mt-0" href="/">
-                <svg
-                    width="86"
-                    height="25"
-                    viewBox="0 0 86 25"
-                    fill="none"
-                    xmlns="http://www.w3.org/2000/svg"
-                    style={{ cursor: "pointer" }}
-                    className=""
-                >
-                    <path
-                        d="M5.99813 24L0.334125 0.191999L5.90213 -1.90735e-06L9.07013 16.576L12.3981 0.191999L16.9101 -1.90735e-06L11.1501 24H5.99813ZM19.3806 24V-1.90735e-06H31.5726L31.1886 3.744H24.0846V9.472H29.1406L29.1086 13.504H24.0846V20.256H31.8286L31.4446 24H19.3806ZM32.9934 24L38.0494 0.287998L44.7374 -1.90735e-06L49.9214 23.808L44.8014 24L43.9374 18.848H38.2094L37.1854 24H32.9934ZM39.0734 15.008H43.0734L40.8654 3.52L39.0734 15.008ZM59.0016 13.472H57.1776V23.808L52.5056 24.192V0.191999L58.2016 -1.90735e-06C60.9536 -1.90735e-06 63.1083 0.554665 64.6656 1.664C66.223 2.752 67.0016 4.42667 67.0016 6.688C67.0016 8.18133 66.703 9.408 66.1056 10.368C65.5296 11.328 64.687 12.128 63.5776 12.768L65.7216 17.984L67.8976 23.168L63.2896 24.416L59.0016 13.472ZM58.7776 10.016C59.887 10.016 60.751 9.792 61.3696 9.344C62.0096 8.87467 62.3296 8 62.3296 6.72C62.3296 4.736 61.3483 3.744 59.3856 3.744H57.1776V10.016H58.7776ZM81.7994 24.192L74.7914 9.184V23.808L70.5994 24V0.191999L75.4954 -1.90735e-06L81.7034 14.272V0.383999L85.6714 -1.90735e-06V23.808L81.7994 24.192Z"
-                        fill="white"
-                    />
-                </svg>
-            </Link>
-            <div className="flex gap-10 md:gap-4 w-full flex-wrap md:flex-nowrap mt-10 lg:mt-20 items-center">
-                <div className="flex flex-col items-start w-full">
+            <div className="w-full h-[72px] md:h-[96px] xl:h-[117px] flex items-center 2xs:mb-[1rem]">
+                <Link href="/">
+                    <svg
+                        width="86"
+                        height="25"
+                        viewBox="0 0 86 25"
+                        fill="none"
+                        xmlns="http://www.w3.org/2000/svg"
+                        style={{ cursor: "pointer" }}
+                    >
+                        <path
+                            d="M5.99813 24L0.334125 0.191999L5.90213 -1.90735e-06L9.07013 16.576L12.3981 0.191999L16.9101 -1.90735e-06L11.1501 24H5.99813ZM19.3806 24V-1.90735e-06H31.5726L31.1886 3.744H24.0846V9.472H29.1406L29.1086 13.504H24.0846V20.256H31.8286L31.4446 24H19.3806ZM32.9934 24L38.0494 0.287998L44.7374 -1.90735e-06L49.9214 23.808L44.8014 24L43.9374 18.848H38.2094L37.1854 24H32.9934ZM39.0734 15.008H43.0734L40.8654 3.52L39.0734 15.008ZM59.0016 13.472H57.1776V23.808L52.5056 24.192V0.191999L58.2016 -1.90735e-06C60.9536 -1.90735e-06 63.1083 0.554665 64.6656 1.664C66.223 2.752 67.0016 4.42667 67.0016 6.688C67.0016 8.18133 66.703 9.408 66.1056 10.368C65.5296 11.328 64.687 12.128 63.5776 12.768L65.7216 17.984L67.8976 23.168L63.2896 24.416L59.0016 13.472ZM58.7776 10.016C59.887 10.016 60.751 9.792 61.3696 9.344C62.0096 8.87467 62.3296 8 62.3296 6.72C62.3296 4.736 61.3483 3.744 59.3856 3.744H57.1776V10.016H58.7776ZM81.7994 24.192L74.7914 9.184V23.808L70.5994 24V0.191999L75.4954 -1.90735e-06L81.7034 14.272V0.383999L85.6714 -1.90735e-06V23.808L81.7994 24.192Z"
+                            fill="white"
+                        />
+                    </svg>
+                </Link>
+            </div>
+            <div className="flex gap-10 md:gap-4 w-full flex-wrap md:flex-nowrap mt-10 lg:mt-[3.5rem] items-center">
+                <div className="flex flex-col items-start">
                     <h1 className="font-fivo xl:leading-[70px] mb-[12px] xl:mb-12 text-3xl lg:text-4xl xl:text-6xl text-white antialiased hover:subpixel-antialiased font-bold">
                         COMING SOON
                     </h1>
@@ -95,7 +96,7 @@ const ComingSoon = () => {
                         ))}
                     </div>
                 </div>
-                <div className="relative h-max w-full flex items-center">
+                <div className="relative h-max flex items-center">
                     <div className="absolute top-0 left-0 w-full h-full opacity-30 blur-[100px] bg-[#073f8d] z-[1] rounded-[235.54px]" />
                     <img
                         src="/assets/images/auth-img-old.png"
