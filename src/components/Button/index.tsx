@@ -53,7 +53,12 @@ const Button = forwardRef<HTMLButtonElement, ButtonProps>(
                     target={href.startsWith("http") ? "_blank" : "_self"}
                     rel={href.startsWith("http") ? "noopener noreferrer" : ""}
                 >
+                    {IconBefore !== null && <span className="mr-2">{IconBefore}</span>}
+
+                    {isLoading === true ? <Loader /> : label}
                     {children}
+
+                    {IconAfter !== null && <span className="ml-2">{IconAfter}</span>}
                 </a>
             );
         }
