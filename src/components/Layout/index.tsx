@@ -20,7 +20,7 @@ const Layout = ({ children, title }: ILayout) => {
                 />
             </Head>
             <SkipToMain content="main-content" />
-            <div className="w-full h-screen max-h-screen overflow-hidden relative bg-[#15191E]">{children}</div>
+            <div className="w-full h-[100vh] overflow-hidden relative">{children}</div>
         </>
     );
 };

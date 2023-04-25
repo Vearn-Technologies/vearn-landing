@@ -4,7 +4,7 @@
 
 @layer components {
     .timer__item {
-        @apply flex items-center justify-center flex-col border-solid border-[1px] border-[rgba(40,40,40,0.44)] bg-[rgba(40,40,40,0.44)] rounded-[15px] xl:rounded-[40px] w-[70px] xl:w-[102.37px] py-[10px] xl:py-[20px];
+        @apply flex items-center justify-center flex-col border-solid border-[1px] border-[rgba(40,40,40,0.44)] bg-[rgba(40,40,40,0.44)] rounded-[15px] xl:rounded-[40px] w-[60px] 2xs:w-[70px] xl:w-[102.37px] py-[10px] xl:py-[20px];
     }
     .item__title {
         @apply font-fivo text-white leading-[19px] text-[11px] md:text-[13px] mb-0 font-normal;
@@ -175,7 +175,18 @@
 .font-bold-800 {
     font-weight: 800 !important;
 }
-
+html {
+    @apply h-full;
+}
+body {
+    @apply h-full;
+}
+div#__next {
+    @apply h-full;
+}
+main {
+    @apply h-full;
+}
 body {
     font-family: "Fivo Sans", Helvetica, Arial, Lucida, sans-serif;
     margin: 0;
@@ -186,9 +197,7 @@ body {
     -moz-osx-font-smoothing: grayscale;
     height: 100%;
     overflow-x: hidden;
-    /* @media screen and (max-width: 1200px) {
-            opacity: 0;
-        } */
+    background: #15191e;
 }
 
 html {
