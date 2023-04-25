@@ -66,7 +66,7 @@ const ComingSoon = () => {
                     </svg>
                 </Link>
             </div>
-            <div className="flex gap-10 md:gap-4 w-full flex-wrap md:flex-nowrap mt-10 lg:mt-[3.5rem] items-center">
+            <div className="flex gap-10 md:gap-4 w-full flex-wrap md:flex-nowrap mt-10 lg:mt-[3.5rem] items-start">
                 <div className="flex flex-col items-start">
                     <h1 className="font-fivo xl:leading-[70px] mb-[12px] xl:mb-12 text-3xl lg:text-4xl xl:text-6xl text-white antialiased hover:subpixel-antialiased font-bold">
                         COMING SOON
@@ -101,7 +101,7 @@ const ComingSoon = () => {
                     <img
                         src="/assets/images/auth-img-old.png"
                         alt="coming soon"
-                        className="z-[10] relative mx-auto w-3/5 sm:w-2/3 lg:w-full"
+                        className="z-[10] relative mx-auto w-3/5 sm:w-2/3 lg:w-[70%]"
                     />
                 </div>
             </div>
