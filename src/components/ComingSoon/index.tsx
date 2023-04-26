@@ -48,8 +48,8 @@ const ComingSoon = () => {
     ];
 
     return (
-        <div className="container w-full h-full flex flex-col justify-center py-4">
-            <div className="w-full h-[72px] md:h-[96px] xl:h-[117px] flex items-center 2xs:mb-[1rem]">
+        <div className="container w-full h-full flex flex-col 2xs:justify-center py-4">
+            <div className="w-full h-max 2xs:mb-[1rem] 2xs:h-[72px] xl:h-[117px] flex items-center">
                 <Link href="/">
                     <svg
                         width="86"
@@ -66,7 +66,7 @@ const ComingSoon = () => {
                     </svg>
                 </Link>
             </div>
-            <div className="flex gap-10 md:gap-4 w-full flex-wrap md:flex-nowrap mt-10 lg:mt-[3.5rem] items-start">
+            <div className="flex gap-[46px] w-full flex-wrap md:flex-nowrap mt-10 lg:mt-[3.5rem] items-center">
                 <div className="flex flex-col items-start">
                     <h1 className="font-fivo xl:leading-[70px] mb-[12px] xl:mb-12 text-3xl lg:text-4xl xl:text-6xl text-white antialiased hover:subpixel-antialiased font-bold">
                         COMING SOON
@@ -74,7 +74,7 @@ const ComingSoon = () => {
                     <h3 className="antialiased xl:leading-[48px] hover:subpixel-antialiased font-fivo not-italic font-bold text-[#1174ff] text-[24px] xl:text-[36px] mb-3">
                         Vote and Earn
                     </h3>
-                    <p className="text-sm font-fivo text-[#D3D3D3] antialiased hover:subpixel-antialiased mb-[24px] lg:mb-[42px]">
+                    <p className="text-sm font-fivo text-[#D3D3D3] antialiased hover:subpixel-antialiased mb-[24px] xl:mb-[42px]">
                         Watch your favorite TV shows, cast your vote, and earn rewards! Our platform allows you to earn
                         rewards for engaging with the shows you love. Join now and start earning rewards for your
                         passion for TV!
@@ -87,7 +87,7 @@ const ComingSoon = () => {
                         href="https://docs.google.com/forms/d/e/1FAIpQLSfPpkVY5LbnXo2VFfPs9oOmAD5fLM48J4uvcG-MffdQzhsBbQ/viewform?usp=sf_link"
                         className="bg-[#073F8D] h-[48px] md:h-[48px] lg:h-[58px] w-[240px] text-[#FFFFFF] text-[14px] lg:text-base leading-[14px] lg:leading-[24px] font-fivo font-medium flex items-center justify-center gap-2 rounded-[8px]"
                     />
-                    <div className="flex items-center mt-[30px] lg:mt-[63px] gap-[18px]">
+                    <div className="flex items-center mt-[30px] gap-[18px]">
                         {Timer.map((item) => (
                             <div className="timer__item" key={item?.id}>
                                 <h3 className="item__value">{item?.value}</h3>
@@ -96,12 +96,12 @@ const ComingSoon = () => {
                         ))}
                     </div>
                 </div>
-                <div className="relative h-max flex items-center">
+                <div className="relative h-max flex items-center w-full">
                     <div className="absolute top-0 left-0 w-full h-full opacity-30 blur-[100px] bg-[#073f8d] z-[1] rounded-[235.54px]" />
                     <img
                         src="/assets/images/auth-img-old.png"
                         alt="coming soon"
-                        className="z-[10] relative mx-auto w-3/5 sm:w-2/3 lg:w-[70%]"
+                        className="z-[10] relative aspect-auto w-full"
                     />
                 </div>
             </div>
