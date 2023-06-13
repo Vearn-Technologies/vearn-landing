@@ -97,7 +97,7 @@ const NavBar = () => {
 	return (
 		<Flex
 			justifyContent={{ base: "center", sm: "space-between" }}
-			height={{ md: "137px" }}
+			height={{ md: "117px" }}
 			py={{ base: 6, md: 0 }}
 			px={{ base: "1rem", md: 0 }}
 			alignItems="center"
@@ -111,8 +111,8 @@ const NavBar = () => {
 			<Flex alignItems="center" gap={{ base: "0.5rem", md: "1rem" }}>
 				{Timer.map((item) => (
 					<Flex flexDirection="column" alignItems="center" key={item?.id}>
-						<Text fontSize={{ base: "14px", lg: "39.1389px"}}>{item?.value}</Text>
-						<Text fontSize={{ base: "10px", lg: "13.6497px" }}>{item?.title}</Text>
+						<Text fontSize={{ base: "14px"}}>{item?.value}</Text>
+						<Text fontSize={{ base: "10px"}}>{item?.title}</Text>
 					</Flex>
 				))}
 			</Flex>
