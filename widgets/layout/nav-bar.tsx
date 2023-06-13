@@ -1,7 +1,7 @@
 import React, { useEffect, useState } from "react";
 import { useRouter } from "next/router";
 
-import { Box, Button, Flex } from "@chakra-ui/react";
+import { Box, Button, Flex, Text } from "@chakra-ui/react";
 import VLogo from "../global/logo";
 
 let timer: ReturnType<typeof setTimeout> | any;
@@ -49,11 +49,57 @@ const NavBar = () => {
 		localStorage.removeItem("isFirstMount");
 	};
 
+	// Timer
+
+	const [days, setDays] = useState(0);
+	const [hours, setHours] = useState(0);
+	const [minutes, setMinutes] = useState(0);
+	const [seconds, setSeconds] = useState(0);
+
+	useEffect(() => {
+		const interval = setInterval(() => {
+			const countDownDate = new Date("July 01, 2023 00:00:00").getTime();
+			const now = new Date().getTime();
+			const distance = countDownDate - now;
+
+			setDays(Math.floor(distance / (1000 * 60 * 60 * 24)));
+			setHours(Math.floor((distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60)));
+			setMinutes(Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60)));
+			setSeconds(Math.floor((distance % (1000 * 60)) / 1000));
+		}, 1000);
+
+		return () => clearInterval(interval);
+	}, []);
+
+	const Timer = [
+		{
+			id: 1,
+			title: "Days",
+			value: days,
+		},
+		{
+			id: 2,
+			title: "Hours",
+			value: hours,
+		},
+		{
+			id: 3,
+			title: "Minutes",
+			value: minutes,
+		},
+		{
+			id: 4,
+			title: "Seconds",
+			value: seconds,
+		},
+	];
+
 	return (
 		<Flex
-			justifyContent="space-between"
-			height={{ md: "117px" }}
+			justifyContent={{ base: "center", sm: "space-between" }}
+			height={{ md: "137px" }}
 			py={{ base: 6, md: 0 }}
+			px={{ base: "1rem", md: 0 }}
 			alignItems="center"
 			w={{ base: "90%", xl: "80%" }}
 			mx="auto"
@@ -62,6 +108,14 @@ const NavBar = () => {
 			<Box>
 				<VLogo />
 			</Box>
+			<Flex alignItems="center" gap={{ base: "0.5rem", md: "1rem" }}>
+				{Timer.map((item) => (
+					<Flex flexDirection="column" alignItems="center" key={item?.id}>
+						<Text fontSize={{ base: "14px", lg: "39.1389px"}}>{item?.value}</Text>
+						<Text fontSize={{ base: "10px", lg: "13.6497px" }}>{item?.title}</Text>
+					</Flex>
+				))}
+			</Flex>
 			<Flex gap={{ lg: "29px", base: "10px" }} ml={{ md: 2 }} width="max-content">
 				{/* <a
 						href={`https://vearn.co/register/?refId=${ref}`}
@@ -103,12 +157,12 @@ const NavBar = () => {
 				>
 					<Button
 						type="submit"
-						w="full"
+						// w="full"
 						colorScheme="brand"
 						fontSize="xs"
 						fontWeight="medium"
 						h="38px"
-						minW={{ md: "118px" }}
+						// minW={{ md: "118px" }}
 					>
 						Join waitlist
 					</Button>
