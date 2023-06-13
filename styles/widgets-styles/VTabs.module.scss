@@ -1,0 +1,31 @@
+.container {
+  display: flex;
+  align-items: center;
+  gap: 1.2rem;
+  flex-wrap: wrap;
+  position: relative;
+}
+
+.tab {
+  height: 2.5rem;
+  display: flex;
+  align-items: center;
+  padding: 0px 1.688rem;
+  position: relative;
+  z-index: 10;
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 24px;
+  text-transform: capitalize;
+}
+
+.active_bar {
+  height: 40px;
+  background: #1e252d;
+  border-radius: 2px;
+  position: absolute;
+  left: 0;
+  //   width: 200px;
+  top: 0;
+  transition: 500ms;
+}
