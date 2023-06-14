@@ -21,8 +21,8 @@ function getRandomMessage(messages: string[]): string {
 }
 
 const EmptyPromotions: React.FC<{}> = () => {
-	const [isPromoterMessages, setIsPromoterMessages] = useState<string[]>([]);
-	const [isVoterMessages, setIsVoterMessages] = useState<string[]>([]);
+	const [isPromoterMessages, setIsPromoterMessages] = useState<string>(promoterMessages[0]);
+	const [isVoterMessages, setIsVoterMessages] = useState<string>(voterMessages[0]);
 	const [isClient, setIsClient] = useState(false);
 
 	useEffect(() => {
