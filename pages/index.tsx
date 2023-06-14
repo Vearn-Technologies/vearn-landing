@@ -1,12 +1,70 @@
-import React from "react";
+import React, { useState, useEffect } from "react";
 import { Box, Flex, Grid, GridItem, Text } from "@chakra-ui/react";
 import Image from "next/image";
 
 import EmptyPromotions from "../widgets/home/empty-promotions";
 
 const VoterPage = () => {
+	// Timer
+
+	const [days, setDays] = useState(0);
+	const [hours, setHours] = useState(0);
+	const [minutes, setMinutes] = useState(0);
+	const [seconds, setSeconds] = useState(0);
+
+	useEffect(() => {
+		const interval = setInterval(() => {
+			const countDownDate = new Date("July 01, 2023 00:00:00").getTime();
+			const now = new Date().getTime();
+			const distance = countDownDate - now;
+
+			setDays(Math.floor(distance / (1000 * 60 * 60 * 24)));
+			setHours(Math.floor((distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60)));
+			setMinutes(Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60)));
+			setSeconds(Math.floor((distance % (1000 * 60)) / 1000));
+		}, 1000);
+
+		return () => clearInterval(interval);
+	}, []);
+
+	const Timer = [
+		{
+			id: 1,
+			title: "Days",
+			value: days,
+		},
+		{
+			id: 2,
+			title: "Hours",
+			value: hours,
+		},
+		{
+			id: 3,
+			title: "Minutes",
+			value: minutes,
+		},
+		{
+			id: 4,
+			title: "Seconds",
+			value: seconds,
+		},
+	];
 	return (
 		<Box pb="20">
+			<Box
+				alignItems="center"
+				justifyContent="center"
+				gap={{ base: "0.5rem", md: "1rem" }}
+				marginBottom="1rem"
+				display={{ base: "flex", sm: "none" }}
+			>
+				{Timer.map((item) => (
+					<Flex flexDirection="column" alignItems="center" key={item?.id}>
+						<Text fontSize={{ base: "14px" }}>{item?.value}</Text>
+						<Text fontSize={{ base: "10px" }}>{item?.title}</Text>
+					</Flex>
+				))}
+			</Box>
 			<Grid
 				bg="url('/voter-bg.png')"
 				bgRepeat="no-repeat"

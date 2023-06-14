@@ -96,7 +96,7 @@ const NavBar = () => {
 
 	return (
 		<Flex
-			justifyContent={{ base: "center", sm: "space-between" }}
+			justifyContent="space-between"
 			height={{ md: "117px" }}
 			py={{ base: 6, md: 0 }}
 			px={{ base: "1rem", md: 0 }}
@@ -108,14 +108,14 @@ const NavBar = () => {
 			<Box>
 				<VLogo />
 			</Box>
-			<Flex alignItems="center" gap={{ base: "0.5rem", md: "1rem" }}>
+			<Box alignItems="center" gap={{ base: "0.5rem", md: "1rem" }} display={{ base: "none", sm: "flex"}}>
 				{Timer.map((item) => (
 					<Flex flexDirection="column" alignItems="center" key={item?.id}>
 						<Text fontSize={{ base: "14px"}}>{item?.value}</Text>
 						<Text fontSize={{ base: "10px"}}>{item?.title}</Text>
 					</Flex>
 				))}
-			</Flex>
+			</Box>
 			<Flex gap={{ lg: "29px", base: "10px" }} ml={{ md: 2 }} width="max-content">
 				{/* <a
 						href={`https://vearn.co/register/?refId=${ref}`}
