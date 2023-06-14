@@ -111,8 +111,8 @@ const NavBar = () => {
 			<Flex alignItems="center" gap={{ base: "0.5rem", md: "1rem" }}>
 				{Timer.map((item) => (
 					<Flex flexDirection="column" alignItems="center" key={item?.id}>
-						<Text fontSize={{ base: "14px"}}>{item?.value}</Text>
-						<Text fontSize={{ base: "10px"}}>{item?.title}</Text>
+						<Text fontSize={{ base: "17px"}}>{item?.value}</Text>
+						<Text fontSize={{ base: "13px"}}>{item?.title}</Text>
 					</Flex>
 				))}
 			</Flex>
@@ -164,7 +164,7 @@ const NavBar = () => {
 						h="38px"
 						// minW={{ md: "118px" }}
 					>
-						Join waitlist
+						Join waitlist!
 					</Button>
 				</a>
 			</Flex>
