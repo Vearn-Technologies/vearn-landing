@@ -11,6 +11,7 @@ const VoterPage = () => {
 	const [hours, setHours] = useState(0);
 	const [minutes, setMinutes] = useState(0);
 	const [seconds, setSeconds] = useState(0);
+	const [isClient, setIsClient] = useState(false);
 
 	useEffect(() => {
 		const interval = setInterval(() => {
@@ -49,8 +50,11 @@ const VoterPage = () => {
 			value: seconds,
 		},
 	];
+	useEffect(() => {
+		setIsClient(true);
+	}, []);
 	return (
-		<Box pb="20">
+		<Flex flexDirection="column" pb="20" marginTop="1rem">
 			<Box
 				alignItems="center"
 				justifyContent="center"
@@ -58,12 +62,13 @@ const VoterPage = () => {
 				marginBottom="1rem"
 				display={{ base: "flex", sm: "none" }}
 			>
-				{Timer.map((item) => (
-					<Flex flexDirection="column" alignItems="center" key={item?.id}>
-						<Text fontSize={{ base: "14px" }}>{item?.value}</Text>
-						<Text fontSize={{ base: "10px" }}>{item?.title}</Text>
-					</Flex>
-				))}
+				{isClient &&
+					Timer.map((item) => (
+						<Flex flexDirection="column" alignItems="center" key={item?.id}>
+							<Text fontSize={{ base: "14px" }}>{item?.value}</Text>
+							<Text fontSize={{ base: "10px" }}>{item?.title}</Text>
+						</Flex>
+					))}
 			</Box>
 			<Grid
 				bg="url('/voter-bg.png')"
@@ -109,7 +114,7 @@ const VoterPage = () => {
 			</Grid>
 
 			<EmptyPromotions />
-		</Box>
+		</Flex>
 	);
 };
 
