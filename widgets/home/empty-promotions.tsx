@@ -3,6 +3,7 @@ import { Box, Flex, Image, Text } from "@chakra-ui/react";
 import Footer from "../layout/footer";
 import Subscribe from "./subscribe";
 
+
 const promoterMessages = [
 	"Hey, Promoters! Amplify your influence with VEARN! We ensure your faves get genuine support, with each vote making a real impact. Time to up your game in a user-friendly way. Dive into the VEARN experience today!",
 	"Promoters, boost your faves' visibility with VEARN! Our platform guarantees authentic voter support. Experience the revolution in user engagement. Join VEARN now!",
@@ -20,10 +21,27 @@ function getRandomMessage(messages: string[]): string {
 }
 
 const EmptyPromotions: React.FC<{}> = () => {
+	const [isPromoterMessages, setIsPromoterMessages] = useState<string[]>([]);
+	const [isVoterMessages, setIsVoterMessages] = useState<string[]>([]);
 	const [isClient, setIsClient] = useState(false);
+
 	useEffect(() => {
 		setIsClient(true);
 	}, []);
+
+  useEffect(() => {
+		const interval = setInterval(() => {
+			const pMessage = getRandomMessage(promoterMessages);
+			const vMessage = getRandomMessage(voterMessages);
+			setIsPromoterMessages(pMessage as any);
+			setIsVoterMessages(vMessage as any);
+		}, 5000);
+
+		return () => {
+			clearInterval(interval);
+		};
+  }, []);
+
 	return (
 		<section>
 			<Flex
@@ -58,7 +76,7 @@ const EmptyPromotions: React.FC<{}> = () => {
 							px={"4px"}
 							textAlign={{ base: "center", md: "left" }}
 						>
-							{getRandomMessage(promoterMessages)}
+							{isPromoterMessages}
 						</Text>
 					)}
 				</Box>
@@ -123,7 +141,7 @@ const EmptyPromotions: React.FC<{}> = () => {
 							px={"4px"}
 							textAlign={{ base: "center", md: "left" }}
 						>
-							{getRandomMessage(voterMessages)}
+							{isVoterMessages}
 						</Text>
 					)}
 				</Box>
