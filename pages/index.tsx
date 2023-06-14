@@ -54,7 +54,7 @@ const VoterPage = () => {
 		setIsClient(true);
 	}, []);
 	return (
-		<Flex flexDirection="column" pb="20" marginTop="1rem">
+		<Flex flexDirection="column" pb="20" marginTop="1rem" my="3rem" overflowY="scroll">
 			<Box
 				alignItems="center"
 				justifyContent="center"
