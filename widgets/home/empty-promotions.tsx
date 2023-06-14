@@ -35,7 +35,7 @@ const EmptyPromotions: React.FC<{}> = () => {
 			const vMessage = getRandomMessage(voterMessages);
 			setIsPromoterMessages(pMessage as any);
 			setIsVoterMessages(vMessage as any);
-		}, 5000);
+		}, 20000);
 
 		return () => {
 			clearInterval(interval);
