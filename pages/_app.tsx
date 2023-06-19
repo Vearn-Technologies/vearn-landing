@@ -14,7 +14,7 @@ function MyApp({ Component, pageProps }: AppProps & { Component: ComponentExtras
 	return (
 		<ChakraProvider theme={theme}>
 			<Head>
-				<title>{Component.title + "- Vearn"}</title>
+				<title>{"Vearn | " + Component.title}</title>
 			</Head>
 			<LayoutWidget layout={LayoutEnums[pageProps.layout as keyof typeof LayoutEnums]}>
 				<Component {...pageProps} />
