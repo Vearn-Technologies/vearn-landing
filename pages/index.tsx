@@ -15,7 +15,7 @@ const VoterPage = () => {
 
 	useEffect(() => {
 		const interval = setInterval(() => {
-			const countDownDate = new Date("July 01, 2023 00:00:00").getTime();
+			const countDownDate = new Date("July 31, 2023 00:00:00").getTime();
 			const now = new Date().getTime();
 			const distance = countDownDate - now;
 
