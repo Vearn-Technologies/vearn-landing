@@ -15,7 +15,7 @@ const Subscribe = () => {
 			<a
 				rel="noreferrer"
 				target="_blank"
-				href="https://docs.google.com/forms/d/e/1FAIpQLSfPpkVY5LbnXo2VFfPs9oOmAD5fLM48J4uvcG-MffdQzhsBbQ/viewform?usp=sf_link"
+				href="https://3fyas744owl.typeform.com/to/QqcQ9kH9"
 			>
 				<Button type="button" mt={6} colorScheme="brand" fontSize="sm" h="49px" px="4rem">
 					{/* Subscribe */}
