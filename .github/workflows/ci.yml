@@ -24,5 +24,4 @@ jobs:
                   key: ${{ secrets.SERVER_KEY }}
                   script:
                       cd ${{env.DEPLOY_DIR}} && sudo git stash && sudo git pull
-                      https://${{env.GIT_USER}}:${{env.GIT_PASS}}@github.com/${{env.REPO}}.git main --no-edit && sudo
-                      docker-compose up -d --build
+                      https://${{env.GIT_USER}}:${{env.GIT_PASS}}@github.com/${{env.REPO}}.git main --no-edit && sudo docker-compose up -d --build
