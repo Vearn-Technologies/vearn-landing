@@ -11,9 +11,9 @@ const promoterMessages = [
 ];
 
 const voterMessages = [
-	"With VEARN, you're not just a fan, you're a part of the journey! Cast votes for your fave stars across a multitude of shows, and get rewarded while doing it!",
-	"On VEARN, your vote counts and pays! Support your favorite stars on all your favorite shows and earn along the way!",
-	"Join VEARN and make your mark! Vote for your favorite stars, influence their journey, and earn rewards! Make watching your favorite shows even more exciting!",
+	"With VEARN, you're not just a fan, you're a part of the journey! Cast votes for your fave stars across a multitude of shows, and earn cash while doing it!",
+	"On VEARN, your vote counts and pays! Support your favorite stars on all your favorite shows and earn cash along the way!",
+	"Join VEARN and make your mark! Vote for your favorite stars, influence their journey, and earn cash rewards! Make watching your favorite shows even more exciting!",
 ];
 
 function getRandomMessage(messages: string[]): string {
