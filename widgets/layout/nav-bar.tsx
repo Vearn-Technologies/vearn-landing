@@ -58,7 +58,7 @@ const NavBar = () => {
 
 	useEffect(() => {
 		const interval = setInterval(() => {
-			const countDownDate = new Date("August 31, 2023 00:00:00").getTime();
+			const countDownDate = new Date("July 23, 2023 00:00:00").getTime();
 			const now = new Date().getTime();
 			const distance = countDownDate - now;
 
