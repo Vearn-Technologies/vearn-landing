@@ -153,7 +153,7 @@ const NavBar = () => {
 				<a
 					target="_blank"
 					rel="noreferrer noopener"
-					href="https://3fyas744owl.typeform.com/to/QqcQ9kH9"
+					href="https://forms.gle/WdFt1hrrWYvwUYjy7"
 				>
 					<Button
 						type="submit"
