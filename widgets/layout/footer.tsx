@@ -12,7 +12,7 @@ const Footer = () => {
                 Follow us on social media           
             </Text>
             <Box maxW="450px" w="450px" py={6} display="flex" justifyContent="space-around" >
-                <Link href="https://www.instagram.com/vearn_hq">
+                <Link href="https://www.facebook.com/vearnhq">
                     <Image src="/fb.png" alt="facebook" width="auto" />
                 </Link>
                 <Link href="https://twitter.com/vearn_hq">
@@ -21,7 +21,7 @@ const Footer = () => {
                 <Link href="https://www.instagram.com/vearn_hq">
                     <Image src="/ig.png" alt="instagram" width="auto" />
                 </Link>
-                <Link href="https://twitter.com/vearn_hq">
+                <Link href="https://www.linkedin.com/company/vearn">
                     <Image src="/linkedin.png" alt="LinkedIn" width="auto" />
                 </Link>
             </Box>
