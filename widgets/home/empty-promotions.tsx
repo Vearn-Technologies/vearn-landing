@@ -44,57 +44,7 @@ const EmptyPromotions: React.FC<{}> = () => {
 
 	return (
 		<section>
-			<Flex
-				mt={[20, 32]}
-				flexWrap="wrap"
-				w="full"
-				justifyContent={{ base: "center", md: "space-between" }}
-				display={{ base: "flex", md: "static" }}
-			>
-				<Box
-					w={{ base: "full", md: "50%" }}
-					my="auto"
-					px={{ "2xl": "4rem", base: 3 }}
-					justifyContent={{ base: "center", md: "space-between" }}
-					display={{ base: "flex", md: "static" }}
-					flexWrap="wrap"
-				>
-					<Text
-						fontSize="4xl"
-						my={6}
-						fontWeight="bold"
-						textAlign={{ base: "center", md: "left" }}
-						width="full"
-					>
-						Promote your Faves on VEARN
-					</Text>
-					{isClient && (
-						<Text
-							fontSize="sm"
-							fontWeight=""
-							maxW="450px"
-							px={"4px"}
-							textAlign={{ base: "center", md: "left" }}
-						>
-							{isPromoterMessages}
-						</Text>
-					)}
-				</Box>
-				<Box
-					px={{ "2xl": 6, base: 3 }}
-					my={{ md: "auto", base: "2rem" }}
-					w={{ base: "full", md: "50%" }}
-					position="relative"
-					zIndex={2}
-					overflow="hidden"
-					padding="30px"
-					display="flex"
-					justifyContent="center"
-				>
-					<Image src="/multi-banner.png" alt="banner of multiple shows" h="auto" />
-					<Box className="bg-gradient-empty"></Box>
-				</Box>
-			</Flex>
+
 			<Flex
 				mt={[20, 32]}
 				flexWrap="wrap"
@@ -142,6 +92,58 @@ const EmptyPromotions: React.FC<{}> = () => {
 							textAlign={{ base: "center", md: "left" }}
 						>
 							{isVoterMessages}
+						</Text>
+					)}
+				</Box>
+				<Box
+					px={{ "2xl": 6, base: 3 }}
+					my={{ md: "auto", base: "2rem" }}
+					w={{ base: "full", md: "50%" }}
+					position="relative"
+					zIndex={2}
+					overflow="hidden"
+					padding="30px"
+					display="flex"
+					justifyContent="center"
+				>
+					<Image src="/multi-banner.png" alt="banner of multiple shows" h="auto" />
+					<Box className="bg-gradient-empty"></Box>
+				</Box>
+			</Flex>
+
+			<Flex
+				mt={[20, 32]}
+				flexWrap="wrap"
+				w="full"
+				justifyContent={{ base: "center", md: "space-between" }}
+				display={{ base: "flex", md: "static" }}
+			>
+				<Box
+					w={{ base: "full", md: "50%" }}
+					my="auto"
+					px={{ "2xl": "4rem", base: 3 }}
+					justifyContent={{ base: "center", md: "space-between" }}
+					display={{ base: "flex", md: "static" }}
+					flexWrap="wrap"
+				>
+					<Text
+						fontSize="4xl"
+						my={6}
+						fontWeight="bold"
+						textAlign={{ base: "center", md: "left" }}
+						width="full"
+					>
+						Promote your Faves on VEARN
+					</Text>
+					{isClient && (
+						<Text
+							fontSize="sm"
+							fontWeight=""
+							maxW="450px"
+							px={"4px"}
+							textAlign={{ base: "center", md: "left" }}
+						>
+							{isPromoterMessages}
 						</Text>
 					)}
 				</Box>
