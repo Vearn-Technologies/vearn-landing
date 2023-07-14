@@ -95,20 +95,7 @@ const EmptyPromotions: React.FC<{}> = () => {
 						</Text>
 					)}
 				</Box>
-				<Box
-					px={{ "2xl": 6, base: 3 }}
-					my={{ md: "auto", base: "2rem" }}
-					w={{ base: "full", md: "50%" }}
-					position="relative"
-					zIndex={2}
-					overflow="hidden"
-					padding="30px"
-					display="flex"
-					justifyContent="center"
-				>
-					<Image src="/multi-banner.png" alt="banner of multiple shows" h="auto" />
-					<Box className="bg-gradient-empty"></Box>
-				</Box>
+
 			</Flex>
 
 			<Flex
@@ -146,6 +133,20 @@ const EmptyPromotions: React.FC<{}> = () => {
 							{isPromoterMessages}
 						</Text>
 					)}
+				</Box>
+				<Box
+					px={{ "2xl": 6, base: 3 }}
+					my={{ md: "auto", base: "2rem" }}
+					w={{ base: "full", md: "50%" }}
+					position="relative"
+					zIndex={2}
+					overflow="hidden"
+					padding="30px"
+					display="flex"
+					justifyContent="center"
+				>
+					<Image src="/multi-banner.png" alt="banner of multiple shows" h="auto" />
+					<Box className="bg-gradient-empty"></Box>
 				</Box>
 			</Flex>
 			<Subscribe />
