@@ -153,7 +153,7 @@ const NavBar = () => {
 				<a
 					target="_blank"
 					rel="noreferrer noopener"
-					href="https://forms.gle/WdFt1hrrWYvwUYjy7"
+					href="https://1c7e7443.sibforms.com/serve/MUIFAFpGVDBs07r7Z7HvRxc4DD-LOVDPrxBm109hO7bWjV7av66zo9F3z2GfuCvjFpRO90DUbYiyxTTw43m6aTMctt7_mDXH_h3NjhveGZpO_UF6dVl1bJLjeArCWtr98atVMB9D_LUraukjCIVnCg-ksUDKP5kUrORgGRl_Hmrdyo7Z_mGJObEkpHjnCCByjRt-waq40hjM-hSP"
 				>
 					<Button
 						type="submit"
@@ -164,7 +164,7 @@ const NavBar = () => {
 						h="38px"
 						// minW={{ md: "118px" }}
 					>
-						Join waitlist!
+						Signup now!
 					</Button>
 				</a>
 			</Flex>
