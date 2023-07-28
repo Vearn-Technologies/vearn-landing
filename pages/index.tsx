@@ -99,6 +99,7 @@ const VoterPage = () => {
 								height="100px"
 							/>
 						</Flex>
+
 					</Box>
 				</GridItem>
 
