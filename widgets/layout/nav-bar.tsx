@@ -58,7 +58,7 @@ const NavBar = () => {
 
 	useEffect(() => {
 		const interval = setInterval(() => {
-			const countDownDate = new Date("August 9, 2023 00:00:00").getTime();
+			const countDownDate = new Date("August 12, 2023 00:00:00").getTime();
 			const now = new Date().getTime();
 			const distance = countDownDate - now;
 
@@ -153,7 +153,7 @@ const NavBar = () => {
 				<a
 					target="_blank"
 					rel="noreferrer noopener"
-					href="https://1c7e7443.sibforms.com/serve/MUIFAFpGVDBs07r7Z7HvRxc4DD-LOVDPrxBm109hO7bWjV7av66zo9F3z2GfuCvjFpRO90DUbYiyxTTw43m6aTMctt7_mDXH_h3NjhveGZpO_UF6dVl1bJLjeArCWtr98atVMB9D_LUraukjCIVnCg-ksUDKP5kUrORgGRl_Hmrdyo7Z_mGJObEkpHjnCCByjRt-waq40hjM-hSP"
+					href="https://forms.gle/6oukAaohvi3dchJ89"
 				>
 					<Button
 						type="submit"
