@@ -119,7 +119,7 @@ const VoterPage = () => {
 	);
 };
 
-VoterPage.title = "Home";
+VoterPage.title = "VEARN - Watch your favorite TV shows, cast your vote, and earn rewards";
 
 export async function getStaticProps() {
 	return {
