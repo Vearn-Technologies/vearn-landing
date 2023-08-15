@@ -14,7 +14,7 @@ function MyApp({ Component, pageProps }: AppProps & { Component: ComponentExtras
 	return (
 		<ChakraProvider theme={theme}>
 			<Head>
-				<title>{"Vearn | " + Component.title}</title>
+				<title>{Component.title}</title>
 				<meta name="description" content="Vote for your favorite contestants on TV shows, earn rewards, and discover events near you with VEARN."/>
     <meta name="keywords" content="vote, TV shows, rewards, events, promotions, bbnaija, big brother naija, big brother, nigerian idol"/>
     <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
