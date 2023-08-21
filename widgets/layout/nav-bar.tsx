@@ -3,6 +3,7 @@ import { useRouter } from "next/router";
 
 import { Box, Button, Flex, Text } from "@chakra-ui/react";
 import VLogo from "../global/logo";
+import useReferral from "../../hooks/useReferral";
 
 let timer: ReturnType<typeof setTimeout> | any;
 const debounce = (func: Function, timeout = 500) => {
@@ -11,88 +12,7 @@ const debounce = (func: Function, timeout = 500) => {
 };
 
 const NavBar = () => {
-	const router = useRouter();
-
-	// Referral
-	const [ref, setRef] = useState<string | null>(null);
-	// Clear url after saving refId query to localstorage
-	useEffect(() => {
-		// Get the query parameter from the URL
-		const refId = router.query.refId;
-
-		// Check if it's the first mount
-		const isFirstMount = localStorage.getItem("isFirstMount") === null;
-
-		if (isFirstMount && refId) {
-			// Save the query parameter to localStorage
-			localStorage.setItem("refId", refId as any);
-
-			// Attach the saved item to a tag (e.g., body or document.documentElement)
-			// document.documentElement.setAttribute("data-my-query-param", queryParam);
-
-			// Clear the query parameter from the URL
-			const { pathname, query } = router;
-			delete query.refId;
-
-			// Replace the URL without preserving the browser history
-			router.replace({ pathname, query }, undefined, { shallow: true });
-
-			// Set isFirstMount to false in localStorage
-			localStorage.setItem("isFirstMount", "false");
-		}
-		// Retrieve the saved query parameter from localStorage
-		const savedRef = localStorage.getItem("refId");
-		setRef(savedRef);
-	}, [router]);
-	const clear = () => {
-		localStorage.removeItem("refId");
-		localStorage.removeItem("isFirstMount");
-	};
-
-	// Timer
-
-	const [days, setDays] = useState(0);
-	const [hours, setHours] = useState(0);
-	const [minutes, setMinutes] = useState(0);
-	const [seconds, setSeconds] = useState(0);
-
-	useEffect(() => {
-		const interval = setInterval(() => {
-			const countDownDate = new Date("August 21, 2023 20:00:00").getTime();
-			const now = new Date().getTime();
-			const distance = countDownDate - now;
-
-			setDays(Math.floor(distance / (1000 * 60 * 60 * 24)));
-			setHours(Math.floor((distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60)));
-			setMinutes(Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60)));
-			setSeconds(Math.floor((distance % (1000 * 60)) / 1000));
-		}, 1000);
-
-		return () => clearInterval(interval);
-	}, []);
-
-	const Timer = [
-		{
-			id: 1,
-			title: "Days",
-			value: days,
-		},
-		{
-			id: 2,
-			title: "Hours",
-			value: hours,
-		},
-		{
-			id: 3,
-			title: "Minutes",
-			value: minutes,
-		},
-		{
-			id: 4,
-			title: "Seconds",
-			value: seconds,
-		},
-	];
+	const { ref, clear} = useReferral();
 
 	return (
 		<Flex

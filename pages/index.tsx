@@ -4,71 +4,8 @@ import { Box, Flex, Grid, GridItem, Text, Image } from "@chakra-ui/react";
 import EmptyPromotions from "../widgets/home/empty-promotions";
 
 const VoterPage = () => {
-	// Timer
-
-	const [days, setDays] = useState(0);
-	const [hours, setHours] = useState(0);
-	const [minutes, setMinutes] = useState(0);
-	const [seconds, setSeconds] = useState(0);
-	const [isClient, setIsClient] = useState(false);
-
-	useEffect(() => {
-		const interval = setInterval(() => {
-			const countDownDate = new Date("August 21, 2023 20:00:00").getTime();
-			const now = new Date().getTime();
-			const distance = countDownDate - now;
-
-			setDays(Math.floor(distance / (1000 * 60 * 60 * 24)));
-			setHours(Math.floor((distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60)));
-			setMinutes(Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60)));
-			setSeconds(Math.floor((distance % (1000 * 60)) / 1000));
-		}, 1000);
-
-		return () => clearInterval(interval);
-	}, []);
-
-	const Timer = [
-		{
-			id: 1,
-			title: "Days",
-			value: days,
-		},
-		{
-			id: 2,
-			title: "Hours",
-			value: hours,
-		},
-		{
-			id: 3,
-			title: "Minutes",
-			value: minutes,
-		},
-		{
-			id: 4,
-			title: "Seconds",
-			value: seconds,
-		},
-	];
-	useEffect(() => {
-		setIsClient(true);
-	}, []);
 	return (
 		<Flex flexDirection="column" pb="20" marginTop="1rem" my="3rem" overflowY="scroll">
-			<Box
-				alignItems="center"
-				justifyContent="center"
-				gap={{ base: "0.5rem", md: "1rem" }}
-				marginBottom="1rem"
-				display={{ base: "flex", sm: "none" }}
-			>
-				{isClient &&
-					Timer.map((item) => (
-						<Flex flexDirection="column" alignItems="center" key={item?.id}>
-							<Text fontSize={{ base: "14px" }}>{item?.value}</Text>
-							<Text fontSize={{ base: "10px" }}>{item?.title}</Text>
-						</Flex>
-					))}
-			</Box>
 			<Grid
 				bg="url('/voter-bg.png')"
 				bgRepeat="no-repeat"
