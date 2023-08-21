@@ -108,17 +108,9 @@ const NavBar = () => {
 			<Box>
 				<VLogo />
 			</Box>
-			<Box alignItems="center" gap={{ base: "0.5rem", md: "1rem" }} display={{ base: "none", sm: "flex"}}>
-				{Timer.map((item) => (
-					<Flex flexDirection="column" alignItems="center" key={item?.id}>
-						<Text fontSize={{ base: "17px"}}>{item?.value}</Text>
-						<Text fontSize={{ base: "13px"}}>{item?.title}</Text>
-					</Flex>
-				))}
-			</Box>
 			<Flex gap={{ lg: "29px", base: "10px" }} ml={{ md: 2 }} width="max-content">
 				{/* <a
-						href={`https://vearn.co/register/?refId=${ref}`}
+						href={`https://app.vearn.co/?refId=${ref}`}
 						target="_blank"
 						rel="noreferrer noopener"
 						onClick={() => clear()}
@@ -153,7 +145,8 @@ const NavBar = () => {
 				<a
 					target="_blank"
 					rel="noreferrer noopener"
-					href="https://forms.gle/6oukAaohvi3dchJ89"
+					// href="https://forms.gle/6oukAaohvi3dchJ89"
+					href={`https://app.vearn.co/?refId=${ref}`}
 				>
 					<Button
 						type="submit"
