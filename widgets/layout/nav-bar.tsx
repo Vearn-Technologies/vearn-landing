@@ -156,6 +156,7 @@ const NavBar = () => {
 						fontWeight="medium"
 						h="38px"
 						// minW={{ md: "118px" }}
+						onClick={() => clear()}
 					>
 						Signup now!
 					</Button>
