@@ -1,6 +1,5 @@
 import React, { useState, useEffect } from "react";
-import { Box, Flex, Grid, GridItem, Text } from "@chakra-ui/react";
-import Image from "next/image";
+import { Box, Flex, Grid, GridItem, Text, Image } from "@chakra-ui/react";
 
 import EmptyPromotions from "../widgets/home/empty-promotions";
 
@@ -94,7 +93,7 @@ const VoterPage = () => {
 							<Image
 								src="/bb-naija-large.png"
 								alt="bbnaija"
-								layout="fixed"
+								// layout="fixed"
 								width="82.95px"
 								height="100px"
 							/>
