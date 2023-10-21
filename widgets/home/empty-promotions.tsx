@@ -5,15 +5,15 @@ import Subscribe from "./subscribe";
 
 
 const promoterMessages = [
-	"Hey, Promoters! Amplify your influence with VEARN! We ensure your faves get genuine support, with each vote making a real impact. Time to up your game in a user-friendly way. Dive into the VEARN experience today!",
-	"Promoters, boost your faves' visibility with VEARN! Our platform guarantees authentic voter support. Experience the revolution in user engagement. Join VEARN now!",
-	"Hello, Promoters! Maximize your reach with VEARN! We promise your faves get valid voter support, turning every vote into a significant step forward. Explore the future of user engagement with VEARN today!",
+	"Hey, Advertisers! Elevate your campaign's reach with VEARN! We ensure your brand receives genuine engagement, with each interaction making a real impact. Enhance your marketing strategy in a user-friendly way. Dive into the VEARN experience today!",
+	"Advertisers, skyrocket your brand's visibility with VEARN! Our platform guarantees authentic user engagement. Experience the revolution in interactive marketing. Join VEARN now!",
+	"Hello, Advertisers! Extend your reach with VEARN! We promise your campaigns receive valid engagement, turning every click into a significant step forward. Explore the future of user interaction with VEARN today!",
 ];
 
 const voterMessages = [
-	"With VEARN, you're not just a fan, you're a part of the journey! Cast votes for your fave stars across a multitude of shows, and earn cash while doing it!",
-	"On VEARN, your vote counts and pays! Support your favorite stars on all your favorite shows and earn cash along the way!",
-	"Join VEARN and make your mark! Vote for your favorite stars, influence their journey, and earn cash rewards! Make watching your favorite shows even more exciting!",
+	"With VEARN, you're not just a social media user, you're a part of something bigger! Engage with tasks and content from your favorite brands, and earn rewards while doing it!",
+	"On VEARN, your engagement counts and pays! Interact with exciting content, support your favorite brands, and earn rewards along the way!",
+	"Join VEARN and make your interaction count! Engage with tasks, influence real-time campaigns, and earn cash rewards! Turn your social media time into a rewarding experience!",
 ];
 
 function getRandomMessage(messages: string[]): string {
@@ -81,7 +81,7 @@ const EmptyPromotions: React.FC<{}> = () => {
 						textAlign={{ base: "center", md: "left" }}
 						width="full"
 					>
-						Show Love to Your Favorite Stars!{" "}
+						Engage Daily, Complete Tasks, Start Earning Now!{" "}
 					</Text>
 					{isClient && (
 						<Text
@@ -120,7 +120,7 @@ const EmptyPromotions: React.FC<{}> = () => {
 						textAlign={{ base: "center", md: "left" }}
 						width="full"
 					>
-						Promote your Faves on VEARN
+						Advertise on VEARN, Get Real Engagement!
 					</Text>
 					{isClient && (
 						<Text
@@ -145,7 +145,7 @@ const EmptyPromotions: React.FC<{}> = () => {
 					display="flex"
 					justifyContent="center"
 				>
-					<Image src="/multi-banner.png" alt="banner of multiple shows" h="auto" />
+					<Image src="https://res.cloudinary.com/dol2onsxl/image/upload/v1697846849/VEARN/public/multi-banner_nh7k1k.png" alt="banner of multiple shows" h="auto" />
 					<Box className="bg-gradient-empty"></Box>
 				</Box>
 			</Flex>

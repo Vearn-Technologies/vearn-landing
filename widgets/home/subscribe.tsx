@@ -10,7 +10,8 @@ const Subscribe = () => {
 				The wait is over, we&apos;re live!
 			</Text>
 			<Text textAlign="center" fontSize="sm" w="full" fontWeight="">
-				Get paid to vote on BBNaija
+				Get paid cash every week for engaging and <br/> completing online tasks
+				right in the comfort of your home!
 				{/* Join the waitlist */}
 			</Text>
 

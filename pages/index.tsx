@@ -7,7 +7,7 @@ const VoterPage = () => {
 	return (
 		<Flex flexDirection="column" pb="20" marginTop="1rem" my="3rem" overflowY="scroll">
 			<Grid
-				bg="url('/voter-bg.png')"
+				bg="url('https://res.cloudinary.com/dol2onsxl/image/upload/v1697796985/VEARN/public/background_di4a6u.png')"
 				bgRepeat="no-repeat"
 				bgSize="cover"
 				bgPosition="center"
@@ -19,22 +19,45 @@ const VoterPage = () => {
 				<GridItem colSpan={4} h="full">
 					<Box pt={{ md: "16", base: "10" }} w="80%" mx="auto">
 						<Text fontSize="4xl" fontWeight="bold">
-							Vote and Earn
+							Engage and Earn
 						</Text>
 						<Text fontSize="sm" color="#D3D3D3" maxW="400px">
-							Watch your favorite TV shows, cast your vote, and earn rewards! Our platform allows you to
-							earn rewards for engaging with the shows you love. Join now and start earning rewards for
-							your passion for TV!
+							Earn rewards effortlessly by engaging with and completing simple tasks on your favorite social media platforms,
+							right from the comfort of your home.
+							Turn your online activities into profits and enjoy the perks of a side hustle without the hustle!
 						</Text>
-						<Flex>
-							<Image
-								src="/bb-naija-large.png"
-								alt="bbnaija"
-								// layout="fixed"
-								width="82.95px"
-								height="100px"
-							/>
-						</Flex>
+						<Grid
+                                templateColumns="repeat(3, 1fr)"
+                                gap={7}
+                                w="400px"
+                                alignItems="center"
+                                display={{ md: "grid", base: "none" }}
+                                marginTop={{ xl: "0.5rem", base: "0" }}
+                            >
+                                <Image
+                                    src="https://res.cloudinary.com/dol2onsxl/image/upload/v1697796982/VEARN/public/tiktok_logo_dabcw3.png"
+                                    alt="tiktok"
+                                    boxSize="70%"
+                                    objectFit="contain"
+                                    position="relative"
+                                />
+
+                                <Image
+                                    src="https://res.cloudinary.com/dol2onsxl/image/upload/v1697844493/VEARN/public/ENGAGE_AND_EARN_ICON_2_zbzvi9.png"
+                                    alt="phone"
+                                    boxSize="70%"
+                                    objectFit="contain"
+                                    position="relative"
+                                />
+
+                                <Image
+                                    alt="x twitter"
+                                    src="https://res.cloudinary.com/dol2onsxl/image/upload/v1697844493/VEARN/public/ENGAGE_ICON_bt3uuo.png"
+                                    boxSize="70%"
+                                    objectFit="contain"
+                                    position="relative"
+                                />
+                            </Grid>
 
 					</Box>
 				</GridItem>
@@ -43,7 +66,7 @@ const VoterPage = () => {
 					colSpan={3}
 					h="full"
 					display={{ md: "block", base: "none" }}
-					bg="url('/cover-photo.png')"
+					bg="url('https://res.cloudinary.com/dol2onsxl/image/upload/v1697798703/VEARN/public/image_placeholder_ej7rgo.png')"
 					bgRepeat="no-repeat"
 					bgSize="cover"
 					bgPosition="left"
