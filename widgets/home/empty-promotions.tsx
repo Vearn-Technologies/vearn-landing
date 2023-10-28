@@ -63,7 +63,7 @@ const EmptyPromotions: React.FC<{}> = () => {
 					display="flex"
 					justifyContent="center"
 				>
-					<Image src="/bbn-banner.png" alt="banner of multiple shows" h="auto" />{" "}
+					<Image src="https://res.cloudinary.com/dol2onsxl/image/upload/v1697978768/VEARN/public/engage_images_xckkgq.png" alt="banner of multiple shows" h="auto" />{" "}
 					<Box className="bg-gradient-empty"></Box>
 				</Box>
 				<Box
@@ -145,7 +145,7 @@ const EmptyPromotions: React.FC<{}> = () => {
 					display="flex"
 					justifyContent="center"
 				>
-					<Image src="https://res.cloudinary.com/dol2onsxl/image/upload/v1697846849/VEARN/public/multi-banner_nh7k1k.png" alt="banner of multiple shows" h="auto" />
+					<Image src="https://res.cloudinary.com/dol2onsxl/image/upload/v1698477570/VEARN/public/advetiser_section_euqwpv.png" alt="banner of multiple shows" h="auto" />
 					<Box className="bg-gradient-empty"></Box>
 				</Box>
 			</Flex>
