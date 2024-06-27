@@ -1,0 +1,22 @@
+<VirtualHost *:80>
+        ProxyPreserveHost On
+
+        # Servers to proxy the connection, or;
+        # List of application servers:
+        # Usage:
+        # ProxyPass / http://[IP Addr.]:[port]/
+        # ProxyPassReverse / http://[IP Addr.]:[port]/
+        # Example:
+        ProxyPass / http://0.0.0.0:3009/
+        ProxyPassReverse / http://0.0.0.0:3009/
+
+        ServerName vearn.co
+	ServerAlias www.vearn.co
+
+
+
+RewriteEngine on
+RewriteCond %{SERVER_NAME} =www.vearn.co [OR]
+RewriteCond %{SERVER_NAME} =vearn.co
+RewriteRule ^ https://%{SERVER_NAME}%{REQUEST_URI} [END,NE,R=permanent]
+    </VirtualHost>
