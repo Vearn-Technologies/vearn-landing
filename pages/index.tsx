@@ -78,7 +78,7 @@ const VoterPage = () => {
 	);
 };
 
-VoterPage.title = "VEARN - Watch your favorite TV shows, cast your vote, and earn rewards";
+VoterPage.title = "Paid to Vote, Paid To Click, Paid To Watch Videos, Paid To do Surveys | VEARN";
 
 export async function getStaticProps() {
 	return {

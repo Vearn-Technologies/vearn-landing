@@ -19,7 +19,7 @@ jobs:
             - name: Push to CIVAI server
               uses: appleboy/ssh-action@master
               with:
-                  host: ${{ secrets.NEW_SERVER_IP }}
+                  host: "64.23.185.54"
                   username: ${{ secrets.NEW_SERVER_USER }}
                   key: ${{ secrets.SERVER_KEY }}
                   script:
