@@ -1,26 +1,50 @@
-name: CryptVestAI CI
+name: Deploy to GitHub Pages
 
-on: [push]
+on:
+  push:
+    branches: [main]
 
-env:
-    PM2_HOME: "/root/.pm2"
-    PM2_LOC: "/usr/local/bin/pm2"
-    DEPLOY_DIR: "/var/www/.profile/vearn-landing-page"
-    GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+permissions:
+  contents: read
+  pages: write
+  id-token: write
+
+concurrency:
+  group: pages
+  cancel-in-progress: true
 
 jobs:
-    deploy:
-        if: github.ref == 'refs/heads/main'
-        runs-on: [ubuntu-latest]
-        steps:
-            - uses: actions/checkout@v1
-            - name: Push to CIVAI server
-              uses: appleboy/ssh-action@master
-              with:
-                  host: "64.23.185.54"
-                  username: ${{ secrets.NEW_SERVER_USER }}
-                  key: ${{ secrets.SERVER_KEY }}
-                  script:
-                      cd ${{env.DEPLOY_DIR}} && sudo git stash && sudo git pull https://${{ github.actor }}:${{
-                      env.GH_TOKEN }}@github.com/${{ github.repository }}.git main --no-edit && sudo docker-compose up
-                      -d --build
+  build:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+
+      - uses: actions/setup-node@v4
+        with:
+          node-version: 18
+          cache: npm
+
+      - name: Install dependencies
+        run: npm ci
+
+      - name: Build static export
+        run: npm run build-export
+
+      - name: SPA fallback for deep links
+        run: cp out/index.html out/404.html
+
+      - name: Upload Pages artifact
+        uses: actions/upload-pages-artifact@v3
+        with:
+          path: out
+
+  deploy:
+    needs: build
+    runs-on: ubuntu-latest
+    environment:
+      name: github-pages
+      url: ${{ steps.deployment.outputs.page_url }}
+    steps:
+      - name: Deploy to GitHub Pages
+        id: deployment
+        uses: actions/deploy-pages@v4
