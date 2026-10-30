@@ -86,6 +86,7 @@ const EmptyPromotions: React.FC<{}> = () => {
 					{isClient && (
 						<Text
 							fontSize="sm"
+							color="text.muted"
 							fontWeight=""
 							maxW="450px"
 							px={"4px"}
@@ -125,6 +126,7 @@ const EmptyPromotions: React.FC<{}> = () => {
 					{isClient && (
 						<Text
 							fontSize="sm"
+							color="text.muted"
 							fontWeight=""
 							maxW="450px"
 							px={"4px"}

@@ -4,12 +4,12 @@ import useReferral from "../../hooks/useReferral";
 const Subscribe = () => {
 	const { ref, clear } = useReferral();
 	return (
-		<Flex bg="black" flexWrap="wrap" py={20} my={24} mx="auto" w="full" justifyContent="center">
+		<Flex bg="bg.band" flexWrap="wrap" py={20} my={24} mx="auto" w="full" justifyContent="center">
 			<Text textAlign="center" w="full" fontSize="4xl" my={6} fontWeight="bold">
 				{/* Subscribe to our Newsletter */}
 				The wait is over, we&apos;re live!
 			</Text>
-			<Text textAlign="center" fontSize="sm" w="full" fontWeight="">
+			<Text textAlign="center" fontSize="sm" w="full" fontWeight="" color="text.muted">
 				Get paid cash every week for engaging and <br/> completing online tasks
 				right in the comfort of your home!
 				{/* Join the waitlist */}

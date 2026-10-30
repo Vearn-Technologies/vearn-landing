@@ -7,7 +7,15 @@ const VoterPage = () => {
 	return (
 		<Flex flexDirection="column" pb="20" marginTop="1rem" my="3rem" overflowY="scroll">
 			<Grid
-				bg="url('https://res.cloudinary.com/dol2onsxl/image/upload/v1697796985/VEARN/public/background_di4a6u.png')"
+				// The dark gold-line artwork only suits dark mode; light mode gets a plain panel.
+				// _dark is a CSS selector, so the static export never paints the wrong one on reload.
+				bg="bg.subtle"
+				border="1px solid"
+				borderColor="border.default"
+				_dark={{
+					bgImage: "url('https://res.cloudinary.com/dol2onsxl/image/upload/v1697796985/VEARN/public/background_di4a6u.png')",
+					borderColor: "transparent",
+				}}
 				bgRepeat="no-repeat"
 				bgSize="cover"
 				bgPosition="center"
@@ -21,7 +29,7 @@ const VoterPage = () => {
 						<Text fontSize="4xl" fontWeight="bold">
 							Engage and Earn
 						</Text>
-						<Text fontSize="sm" color="#D3D3D3" maxW="400px">
+						<Text fontSize="sm" color="text.muted" maxW="400px">
 							Earn rewards effortlessly by engaging with and completing simple tasks on your favorite social media platforms,
 							right from the comfort of your home.
 							Turn your online activities into profits and enjoy the perks of a side hustle without the hustle!

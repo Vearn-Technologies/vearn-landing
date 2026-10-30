@@ -38,7 +38,7 @@ const LayoutWidget = ({
                 overflow="auto"
                 backgroundColor={
                   layout === LayoutEnums.WITH_SIDEBAR
-                    ? "rgba(0, 0, 0, 0.2)"
+                    ? "bg.subtle"
                     : "transparent"
                 }
                 borderTopRadius="8px"

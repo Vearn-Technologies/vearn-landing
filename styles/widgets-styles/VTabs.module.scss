@@ -21,7 +21,7 @@
 
 .active_bar {
   height: 40px;
-  background: #1e252d;
+  background: var(--chakra-colors-bg-raised);
   border-radius: 2px;
   position: absolute;
   left: 0;

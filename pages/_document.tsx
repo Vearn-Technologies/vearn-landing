@@ -1,9 +1,12 @@
 import { Html, Head, Main, NextScript } from "next/document";
+import { ColorModeScript } from "@chakra-ui/react";
+import { theme } from "../chakra-theme";
 
 export default function Document() {
   return (
 		<Html lang="en" translate="no">
 			<Head>
+				<meta name="color-scheme" content="light dark" />
 				<script
 					src="https://unpkg.com/@fincra-engineering/checkout@2.2.0/dist/inline.min.js"
 					async
@@ -30,6 +33,7 @@ export default function Document() {
                 />
 			</Head>
 			<body>
+				<ColorModeScript initialColorMode={theme.config.initialColorMode} />
 				<Main />
 				<NextScript />
 			</body>

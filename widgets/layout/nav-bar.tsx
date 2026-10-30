@@ -3,6 +3,7 @@ import { useRouter } from "next/router";
 
 import { Box, Button, Flex, Text } from "@chakra-ui/react";
 import VLogo from "../global/logo";
+import ThemeToggle from "../global/theme-toggle";
 import useReferral from "../../hooks/useReferral";
 
 let timer: ReturnType<typeof setTimeout> | any;
@@ -28,7 +29,7 @@ const NavBar = () => {
 			<Box>
 				<VLogo />
 			</Box>
-			<Flex gap={{ lg: "29px", base: "10px" }} ml={{ md: 2 }} width="max-content">
+			<Flex gap={{ lg: "16px", base: "10px" }} ml={{ md: 2 }} width="max-content" alignItems="center">
 				{/* <a
 						href={`https://app.vearn.co/?refId=${ref}`}
 						target="_blank"
@@ -81,6 +82,7 @@ const NavBar = () => {
 						Signup now!
 					</Button>
 				</a>
+				<ThemeToggle />
 			</Flex>
 		</Flex>
 	);
