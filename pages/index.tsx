@@ -7,13 +7,14 @@ const VoterPage = () => {
 	return (
 		<Flex flexDirection="column" pb="20" marginTop="1rem" my="3rem" overflowY="scroll">
 			<Grid
-				// The dark gold-line artwork only suits dark mode; light mode gets a plain panel.
+				// Light mode gets the soft pastel mesh; the dark gold-line artwork only suits dark mode.
 				// _dark is a CSS selector, so the static export never paints the wrong one on reload.
-				bg="bg.subtle"
+				bg="radial-gradient(at 12% 18%, #E3EDFF 0, rgba(227, 237, 255, 0) 48%), radial-gradient(at 88% 22%, #FFF0D2 0, rgba(255, 240, 210, 0) 42%), radial-gradient(at 72% 96%, #DDF5EA 0, rgba(221, 245, 234, 0) 50%), #FFFFFF"
 				border="1px solid"
-				borderColor="border.default"
+				borderColor="#D6DEE6"
 				_dark={{
 					bgImage: "url('https://res.cloudinary.com/dol2onsxl/image/upload/v1697796985/VEARN/public/background_di4a6u.png')",
+					bgColor: "transparent",
 					borderColor: "transparent",
 				}}
 				bgRepeat="no-repeat"

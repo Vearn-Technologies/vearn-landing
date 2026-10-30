@@ -63,7 +63,7 @@ const EmptyPromotions: React.FC<{}> = () => {
 					display="flex"
 					justifyContent="center"
 				>
-					<Image src="https://res.cloudinary.com/dol2onsxl/image/upload/v1697978768/VEARN/public/engage_images_xckkgq.png" alt="banner of multiple shows" h="auto" />{" "}
+					<Image src="https://res.cloudinary.com/dol2onsxl/image/upload/v1697978768/VEARN/public/engage_images_xckkgq.png" alt="banner of multiple shows" h="auto" borderRadius="16px" boxShadow="card" position="relative" zIndex={1} />{" "}
 					<Box className="bg-gradient-empty"></Box>
 				</Box>
 				<Box
@@ -147,7 +147,7 @@ const EmptyPromotions: React.FC<{}> = () => {
 					display="flex"
 					justifyContent="center"
 				>
-					<Image src="https://res.cloudinary.com/dol2onsxl/image/upload/v1698477570/VEARN/public/advetiser_section_euqwpv.png" alt="banner of multiple shows" h="auto" />
+					<Image src="https://res.cloudinary.com/dol2onsxl/image/upload/v1698477570/VEARN/public/advetiser_section_euqwpv.png" alt="banner of multiple shows" h="auto" borderRadius="16px" boxShadow="card" position="relative" zIndex={1} />
 					<Box className="bg-gradient-empty"></Box>
 				</Box>
 			</Flex>

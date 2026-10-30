@@ -4,7 +4,7 @@ import useReferral from "../../hooks/useReferral";
 const Subscribe = () => {
 	const { ref, clear } = useReferral();
 	return (
-		<Flex bg="bg.band" flexWrap="wrap" py={20} my={24} mx="auto" w="full" justifyContent="center">
+		<Flex bg="bg.surface" boxShadow="card" borderRadius="20px" _dark={{ bg: "bg.band", borderRadius: 0 }} flexWrap="wrap" py={20} my={24} mx="auto" w="full" justifyContent="center">
 			<Text textAlign="center" w="full" fontSize="4xl" my={6} fontWeight="bold">
 				{/* Subscribe to our Newsletter */}
 				The wait is over, we&apos;re live!

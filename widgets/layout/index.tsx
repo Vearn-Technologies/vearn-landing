@@ -20,7 +20,15 @@ const LayoutWidget = ({
       {layout === LayoutEnums.WITH_NAV_PLAIN ||
       layout === LayoutEnums.WITH_SIDEBAR ? (
         <>
-          <NavBar />
+          {/* Light mode needs an edge between the header and the page; dark keeps its seamless header.
+              An inset shadow, not a border, so the 72px header height stays exact. */}
+          <Box
+            bg="bg.surface"
+            boxShadow="inset 0 -1px 0 var(--chakra-colors-border-default)"
+            _dark={{ bg: "transparent", boxShadow: "none" }}
+          >
+            <NavBar />
+          </Box>
           <Grid
             templateColumns={{ md: "repeat(6, 1fr)", base: "repeat(1, 1fr)" }}
             width={{ xl: "80%", md: "100%" }}
@@ -34,7 +42,7 @@ const LayoutWidget = ({
               }
             >
               <Box
-                height="calc(100vh - 117px)"
+                height="calc(100vh - 72px)"
                 overflow="auto"
                 backgroundColor={
                   layout === LayoutEnums.WITH_SIDEBAR

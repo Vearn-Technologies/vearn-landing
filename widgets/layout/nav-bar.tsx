@@ -18,8 +18,8 @@ const NavBar = () => {
 	return (
 		<Flex
 			justifyContent="space-between"
-			height={{ md: "117px" }}
-			py={{ base: 6, md: 0 }}
+			height={{ md: "72px" }}
+			py={{ base: 3, md: 0 }}
 			px={{ base: "1rem", md: 0 }}
 			alignItems="center"
 			w={{ base: "90%", xl: "80%" }}

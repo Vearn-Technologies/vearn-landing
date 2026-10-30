@@ -56,6 +56,10 @@ a {
   left: 21%; 
 }
 
+[data-theme="light"] .bg-gradient-empty {
+  display: none;
+}
+
 .chakra-checkbox__control {
   border-radius: 5px !important;
 }
