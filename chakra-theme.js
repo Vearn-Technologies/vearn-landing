@@ -3,7 +3,7 @@ import { extendTheme, withDefaultColorScheme } from "@chakra-ui/react";
 const font = `'Fivo Sans', -apple-system, BlinkMacSystemFont, Segoe UI, Roboto,
 Oxygen, Ubuntu, Cantarell, Fira Sans, Droid Sans, Helvetica Neue, sans-serif;`;
 
-// Light is the default; the page is a faint grey so white surfaces read as cards. Every colour the UI paints comes from a semantic token below, so the
+// Dark is the default; in light mode the page is a faint grey so white surfaces read as cards. Every colour the UI paints comes from a semantic token below, so the
 // toggle only has to flip Chakra's colour mode. Dark values are the colours the site always had.
 const semanticTokens = {
   // Light mode has little fill contrast between surfaces, so cards get a hairline ring and soft shadow.
@@ -54,7 +54,7 @@ const semanticTokens = {
 
 export const theme = extendTheme(
   {
-    config: { initialColorMode: "light", useSystemColorMode: false },
+    config: { initialColorMode: "dark", useSystemColorMode: false },
 
     semanticTokens,
 

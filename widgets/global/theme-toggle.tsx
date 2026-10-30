@@ -17,7 +17,15 @@ const MoonIcon = () => (
 // On phones only the button for the other mode shows, so the header keeps its room. Driven by the
 // data-theme attribute Chakra sets before paint, so it never disagrees with the stored mode.
 const PHONE = "@media screen and (max-width: 47.99em)";
-const hideOnPhoneIn = (mode: "light" | "dark") => ({ [PHONE]: { [`[data-theme=${mode}] &`]: { display: "none" } } });
+// Alone on phones (no pill around it), so the visible button carries its own edge.
+const hideOnPhoneIn = (mode: "light" | "dark") => ({
+    [PHONE]: {
+        border: "1px solid",
+        borderColor: "border.default",
+        bg: "bg.surface",
+        [`[data-theme=${mode}] &`]: { display: "none" },
+    },
+});
 
 const Option = chakra("button", {
 	baseStyle: {
@@ -35,8 +43,6 @@ const Option = chakra("button", {
 		_hover: { color: "text.primary" },
 		"&[aria-pressed='true']": { bg: "brand.solid", color: "white" },
 		_focusVisible: { outline: "2px solid", outlineColor: "brand.outline", outlineOffset: "2px" },
-		// Alone on phones (no pill around it), so it carries its own edge.
-		[PHONE]: { border: "1px solid", borderColor: "border.default", bg: "bg.surface" },
 	},
 });
 
