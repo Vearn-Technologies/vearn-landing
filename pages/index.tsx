@@ -1,4 +1,5 @@
 import React, { useState, useEffect } from "react";
+import Head from "next/head";
 import { Box, Flex, Grid, GridItem, Text, Image } from "@chakra-ui/react";
 
 import EmptyPromotions from "../widgets/home/empty-promotions";
@@ -6,6 +7,10 @@ import EmptyPromotions from "../widgets/home/empty-promotions";
 const VoterPage = () => {
 	return (
 		<Flex flexDirection="column" pb="20" marginTop="1rem" my="3rem" overflowY="scroll">
+			<Head>
+				{/* Referral links (/?refId=...) are the same page; point Google at the clean URL */}
+				<link rel="canonical" href="https://vearn.co/" />
+			</Head>
 			<Grid
 				// Light mode gets the soft pastel mesh; the dark gold-line artwork only suits dark mode.
 				// _dark is a CSS selector, so the static export never paints the wrong one on reload.
